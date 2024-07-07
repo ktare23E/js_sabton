@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+    <style>
+        .youtube-button{
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            color: white;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Exercise 1 -->
+    <p>Youtube Subscribe Button</p>
+    <button class="youtube-button">Subscribe</button>
+    <script>
+
+        // Exercises
+        const youtubeButton = document.querySelector('.youtube-button');
+
+        youtubeButton.addEventListener('click',function(){
+            youtubeButton.innerHTML = 'Subscribed';
+            youtubeButton.style = 'background:white; color:black; border:1px solid black;';
+        })
+    </script>
+</body>
+</html>

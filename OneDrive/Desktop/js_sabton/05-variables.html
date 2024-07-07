@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+</head>
+<body>
+    <p>Cart Quantity <span class="counter">0</span></p>
+    <button class="show">Show Quantity</button>
+    <button class="add">Add to Cart</button>
+    <button class="remove">Remove from Cart</button>
+    <button class="minus-2">-2</button>
+    <button class="minus-3">-3</button>
+    <button class="plus-2">+2</button>
+    <button class="plus-3">+3</button>
+    <button class="plus-4">+4</button>
+    <button class="plus-5">+5</button>
+    <button class="reset">Reset Cart</button>
+    
+
+    <script>
+        let counter = 0;
+        const show = document.querySelector('.show');
+        const add = document.querySelector('.add');
+        const plus2 = document.querySelector('.plus-2');
+        const plus3 = document.querySelector('.plus-3');
+        const reset = document.querySelector('.reset');
+        const plus4 = document.querySelector('.plus-4');
+        const plus5 = document.querySelector('.plus-5');
+        const remove = document.querySelector('.remove');
+        const minus2 = document.querySelector('.minus-2');
+        const minus3 = document.querySelector('.minus-3');
+
+        let change = document.querySelector('.counter');
+
+        
+        function updateRemoveButton(){
+            if(counter >= 1){
+                remove.disabled = false
+            }else{
+                remove.disabled = true;
+            }
+        }
+
+        updateRemoveButton();
+
+        function updateMinus2Button() {
+            if (counter >= 2) {
+                minus2.disabled = false;
+            } else {
+                minus2.disabled = true;
+            }
+        }
+
+        updateMinus2Button();
+
+        function updateMinus3Button() {
+            if (counter >= 3) {
+                minus3.disabled = false;
+            } else {
+                minus3.disabled = true;
+            }
+        }
+
+        updateMinus3Button();
+        
+
+        minus2.addEventListener('click', function(){
+                    counter = counter - 2;
+                    console.log('Cart quantity: ' + counter);
+                    change.innerHTML = counter;
+                    updateRemoveButton();
+                    updateMinus2Button();
+                    updateMinus3Button();
+        });
+
+        minus3.addEventListener('click', function(){
+                counter = counter - 3;
+                console.log('Cart quantity: ' + counter);
+                change.innerHTML = counter;
+                updateRemoveButton();
+                updateMinus2Button();
+                updateMinus3Button();
+        });
+
+        remove.addEventListener('click', function(){
+                counter = counter - 1;
+                console.log('Cart quantity: ' + counter);
+                change.innerHTML = counter;
+                updateRemoveButton();
+                updateMinus2Button();
+                updateMinus3Button();
+        });
+
+        show.addEventListener('click', function(){
+            console.log('Cart quantity: ' + counter);
+            change.innerHTML = counter;
+        });
+
+        add.addEventListener('click', function(){
+            counter = counter + 1;
+            console.log('Cart quantity: ' + counter);
+            change.innerHTML = counter;
+            updateRemoveButton();
+            updateMinus2Button();
+            updateMinus3Button();
+        });
+
+        plus2.addEventListener('click', function(){
+            counter = counter + 2;
+            console.log('Cart quantity: ' + counter);
+            change.innerHTML = counter;
+            updateRemoveButton();
+            updateMinus2Button();
+            updateMinus3Button();
+        });
+
+        plus3.addEventListener('click', function(){
+            counter = counter + 3;
+            console.log('Cart quantity: ' + counter);
+            change.innerHTML = counter;
+            updateRemoveButton();
+            updateMinus2Button();
+            updateMinus3Button();
+        });
+
+        plus4.addEventListener('click', function(){
+            counter += 4;
+            console.log('Cart quantity: ' + counter);
+            change.innerHTML = counter;
+            updateRemoveButton();
+            updateMinus2Button();
+            updateMinus3Button();
+        });
+
+        plus5.addEventListener('click', function(){
+            counter += 5;
+            console.log('Cart quantity: ' + counter);
+            change.innerHTML = counter;
+            updateRemoveButton();
+            updateMinus2Button(); 
+            updateMinus3Button();
+        });
+
+        reset.addEventListener('click', function(){
+            counter = 0;
+            alert('Cart was reset');
+            setTimeout(function(){
+                console.log('Cart quantity: ' + counter);
+                change.innerHTML = counter;
+                updateRemoveButton();
+                updateMinus2Button();
+                updateMinus3Button();
+            }, 1000);
+        });
+
+    </script>
+</body>
+</html>
+

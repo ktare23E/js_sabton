@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Simple</title>
+    <style>
+        input{
+            padding: 10px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        .thirdButton{
+            padding: 15px 30px;
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+        .delete{
+            padding: 15px;
+            border: none;
+            color: white;
+            background-color: red;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        .showThis p{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Todo List Practice 1</h1>
+    <input type="text" placeholder="Todo name">
+    <button class="add">Add</button>
+
+    <h1>Todo List Practice 2</h1>
+    <input type="text" class="practice-2" placeholder="Todo name">
+    <button class="addTwo">Add</button>
+    <div class="to-do-list-2"></div> -->
+    <!-- <p>Todo List</p>
+    <input type="text" class="practice-3" placeholder="Todo name" required>
+    <input type="date" class="" required>
+    <button class="thirdButton">Add</button>
+    <div class="showThis"></div> -->
+    <script>
+        // let inputUser = document.querySelector('input[type="text"]');
+        // let button = document.querySelector('button');
+        // let myArrays = [];
+
+        // button.addEventListener('click', function(){
+        //     let inputValue = inputUser.value;
+        //     if(inputValue){
+        //         myArrays.push(inputValue);
+        //         console.log(myArrays);
+        //         inputUser.value = '';
+        //     }
+        // })
+
+        // let practiceTwo = document.querySelector('.practice-2');
+        // let secondButton = document.querySelector('.addTwo');
+        // let mySecondArrays = [];
+
+        // function displayToDo(){
+        //     let display = '';
+        //     for(let i = 0; i<mySecondArrays.length; i++){
+        //         const toDo = mySecondArrays[i];
+        //         display += `<p>${toDo}</p>`;
+        //     }
+        //     document.querySelector('.to-do-list-2').innerHTML = display;
+        // }
+    
+
+        // secondButton.addEventListener('click',function(){
+        //     let getSecondValue = practiceTwo.value;
+        //     mySecondArrays.push(getSecondValue);
+        //     practiceTwo.value = '';
+        //     console.log(mySecondArrays);
+        //     displayToDo();
+        // });
+
+        //     practiceTwo.addEventListener('keydown',function(event){
+        //         if(event.key === 'Enter'){
+        //             let getSecondValue = practiceTwo.value;
+        //             mySecondArrays.push(getSecondValue);
+        //             practiceTwo.value = '';
+        //             displayToDo();
+        //         }
+        //     })
+
+        // let randomNumber = 0;
+
+        // while(randomNumber < 0.5){
+        //     randomNumber = Math.random();
+        //     console.log(randomNumber);
+        // }
+        
+        // const myArrays = [
+        //     'Cooking',
+        //     'Reading',
+        //     'Coding',
+        //     'Sleeping'
+        // ];
+
+        // for(let i = 0; i<myArrays.length; i++){
+        //     console.log(myArrays[i]);
+        // }
+
+        // const nums = [1,1,3];
+        // let result = 0;
+        // let newResult = 0;
+
+        // for(let i = 0; i<nums.length; i++){
+
+        //     result += nums[i];
+        // }
+
+        // console.log(result);
+
+        // const numsDoubled = [];
+
+        // for(let i = 0; i<nums.length; i++){
+        //     numsDoubled.push(nums[i] * 2);
+        // }
+
+        // for(let j = 0; j<numsDoubled.length; j++){
+        //         newResult += numsDoubled[j];
+        //     }
+
+        // console.log(numsDoubled);
+        // console.log(newResult);
+
+        // let thirdButton = document.querySelector('.thirdButton');
+        // const myThirdArrays = [];
+
+        // thirdButton.addEventListener('click',function(){
+        //     let practiceThree = document.querySelector('.practice-3');
+        //     let getDate = document.querySelector('input[type="date"]');
+        //     let display = '';
+
+        //     const myObjects = {
+        //         practiceThree: practiceThree.value,
+        //         getDate: getDate.value
+        //     };
+
+        //     myThirdArrays.push(myObjects);
+
+        //     practiceThree.value = '';
+        //     getDate.value = '';
+
+        //     // display all value of myThirdArrays in html
+        //     for(let i = 0; i<myThirdArrays.length; i++){
+        //         const toDoObject = myThirdArrays[i];
+        //         // const practiceThree = toDoObject.practiceThree;
+        //         // const getDate = toDoObject.getDate;
+        //         const {practiceThree,getDate} = toDoObject;
+        //         display += `
+        //             <p>
+        //                 ${practiceThree} ${getDate} 
+        //             <button class='delete' onclick='myThirdArrays.splice(${i},1)'>Delete</button>
+        //             </p>`;
+        //     }
+        //     document.querySelector('.showThis').innerHTML = display;
+
+        // });
+    </script>
+</body>
+</html>

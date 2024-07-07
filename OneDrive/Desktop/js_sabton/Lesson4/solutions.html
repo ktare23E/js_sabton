@@ -1,0 +1,54 @@
+4f
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fg -->
+    <title>Buttons</title>
+    <style>
+        .container button{
+            padding: 4px;
+            border: 2px solid black;
+        }
+
+        .cart{
+            background: yellow;
+        }
+
+        .buy{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 4a -->
+    <button>Click</button>
+    <br>
+    <br>
+    <!-- 4b -->
+    <button>Kristian</button>
+    <button>Taler</button>
+    <br>
+    <br>
+    <!-- 4c -->
+    <p>Hello, world!</p>
+
+    <p>Hello, world!</p>
+    <p>Today I'm learning the basic of Javascript which is the math and the number then the String and the basic of html and css.</p>
+
+    <!-- 4e -->
+    <div class="container">
+        <button class="cart">Add to cart</button>
+        <button class="buy">Buy now</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let cart = document.querySelector(".cart");
+    cart.addEventListener("click", function(){
+        console.log("Add to cart");
+    });
+</script>

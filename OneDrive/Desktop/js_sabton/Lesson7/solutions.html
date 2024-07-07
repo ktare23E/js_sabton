@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 7a, 7b, 7c
+        // function great(name){
+        //     name === undefined ? console.log('Hi there'): console.log(`Hello ${name}`);;
+        // }
+
+        // great('');
+
+        // 7d
+        function convertToFahrenheit(celsius){
+            let fahrenheit = (celsius * 9/5) + 32;
+            return fahrenheit; 
+        }
+
+        // console.log(convertToFahrenheit(25));
+
+        // 7e
+        function convertToCelsius(fahrenheit){
+            let celsius = (fahrenheit - 32) * 5/9;
+            return celsius;
+        }
+        convertToCelsius(25);
+        // console.log((86-32) * 5/9);
+        // console.log(convertToCelsius(53));
+
+        // 7f
+        function convertTemperature(degrees,unit){
+            if(unit === 'C'){
+                console.log(convertToFahrenheit(degrees)+ 'F' );
+            }else{
+                console.log(convertToCelsius(degrees)+"C");
+            }
+        }
+        convertTemperature(86,'F');
+    </script>
+</body>
+</html>

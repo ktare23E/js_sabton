@@ -1,0 +1,532 @@
+NUMBER (Money)
+ - kung mag calculate og kwarta or kwarta na ang involve the best way nga imong buhaton kay imo sya e calculate as a cents then back it into dollar example ani niya naa sa ubos.
+-------Example. Add 20.95 and 7.99. Solution (2095 + 799)/100 = 28.94.
+
+STRING(newline)
+ - in default gamiton dapat ang single quotes ('') pero if ang g na buhat nmu na kay multi lines na dra na nmu gamiton ang template literals or backticks (``).
+ - pra ma new line kani ra ang gamiton '\n'.
+-------Example ani niya kay "Hello\nworld" 
+Output: Hello
+	  World
+
+Variables (Syntax)
+- bawal mag gamit og mga reserved or special keywords as a variable then bawal mag start og number sa usa ka variable name then lastly dle ka pwede mo gamit og mga special characters sa usa ka variable nmu like !,@ and so much more nga special characters pero except sa ($ and _ ).
+
+Re-asign Variable
+- if mag re-assign nakag variable dapat wla nay let or var.
+
+
+Comparison Sequence
+- mas taas og priority ang mga math signs kaysa ani niya or shall we say PMDAS una then usa ang comparison opertor.
+
+Conversion Behavior (==) Use === or !==
+- if == operator imong gamiton naay tendency nga magka problem imong system kay for example kani (5 == '5.00') ang e return ani niya kay true kay ang himoan man gd aning == (double equal) kay e convert niya ang usa into a same data type like kani ohh ang 5.00 nga string iyang himoon og number so mo true jd ni sya. Which is sa tinood mali jd sya kay number and string are not the same they are different.
+
+Logical Operator (&&, ||, !)
+- mas ubos ang priority ani niya kasya sa Comparison Operator so meaing unahon ghapon tong mga math operator then comparison oparator then next is this one.
+
+Falsy Values
+- kato ning mga values sa javaScript nga mo behave something diffrent or false. And any value nga wala aning list sa ubos kay g na considered pd as a truthy value.
+-----Example. false,0,'',NaN,undefined,null.
+
+Ternary Operator
+- kato ning shortcut sa if staments nga 1 line ra. Then ang naka advantage ani niya sa if/else condition kay pwede nmu ni sya e sulod og variable. Huna hunaa lang nga ang kaning naa sa question mark (?) kay mao ni ang if condition then kaning colon (:) mao ni ang else condition.
+----Example. truth ? 'truthy':'falsy';
+
+Guard Operator (&&)
+-murah ra ghapon ni syag shortcut sa if statement but ang naka lahi lang ani once falsy na ang unang condition dle na sya mo padayon sa pikas or sa sunod block of code, iyang e terminate diretso. Then ang naka lindot pd ani pwede pd ni sya e store og usa ka variable then imong tawgon2.But then if true ang imong unang condition ang e display or ang result kay katong after sa &&.
+-----Example. false && 'hello'; (The result ani kay walay mo gawas unless imo ning e sulod og variable then ipa display nmu sya.)
+
+Default Operator (||)
+- kani sya kay opposite ni sya sa guard opperator once gane true na ang una or ang left dle na dayon sya mo padayon sa pikas or sa default value but then if falsy ang left or ang unang value then didto na dayon sya sa default value. Same rapd ni sa first 2 nga pwede ra ghapon sya e store sa usa ka variable.
+----Example. 'EUR' || 'USD' ang e display ani niya kay EUR but if kani pd na or falsy na ang left like ani null || 'USD'; then ang e display ani ang default value which is the USD.
+
+Return Statement (return)
+- kani sya nga statement sa pagka karon kay mo gana rani sa function pwede ang function naa ni sya or wala. ang buhaton ra ani niya kay mag return og any value basta value sya ang g tawag ani niya karon kay return value. Then if mag return kag value sa usa ka function it will make the function stop working na or dle na mo lahos sya kung unsa paman gane tong mga code nmu ubos sa return statement.
+----Example. return 'hello world'; (ang resulta ani kay e return niya ang hello world nga string after ana nga function. then if return ra gane imong gamitong mahimo syang undefined.)
+
+Paramater Default value (function calculateTax(cost, taxPercent = 0.1))
+- kani sya mag declare nakag default value sa imong paramater in this case pwede naka dle mag butang og argument ani niya kay naa na syay default value but it you want to modify it then you just simply change or put a second argument.
+
+Object Dot Notation (Default)
+- mao ni sya gamiton default if gusto ka naay e access nga properties, function and even an object inside of an object. Then speaking of an object kaning console and Math are all objects or built-in objects. 
+---Example. const person = {
+	name: 'Kristian'
+}
+
+console.log(person.name) ang result ani kay Kristian
+
+Object Bracket Notation ([])
+- ang gamit ani niya kay pra sa mga property name nga naay mga special characters then dapat pag mag declare kag property name nga naay special character dapat like naa sa example then kani sya pwede sya mo cater og mga string, boolean, number, undefined, NaN and object but sadly sa function dle sya pwede.
+----Example. const experiment = {
+	['funny-thing']:'Yhay'
+} 
+
+console.log(experiment['funny-thing']) gamit ni ma access nmu ni sya. then ang result ani niya kay Yhay.
+
+Object Functions (Methods)
+- kani syang mga functions nga naa sa sulod sa usa ka object then ang tawag na ani nila kay mga methods na sya. Actually g na gamit na nato ni sya atong una pa like console.log() and Math.random() and remember pra mag tawag kag usa ka method naa sa ubos nga example.
+---Example. const hazel = {
+	name = function name(){
+		console.log('Kristian')
+	}
+}
+
+pra ma tawag nmu ni sya dapat inggon ani hazel.name(); ang result ani kay Kristian. Mao ni syay basic exaple sa methods.
+
+JSON 
+- usa ni sya ka built-in Object sa JS daghan or dako kaau ni gamit.
+
+JSON.stringtify()
+- ang gamiton ani niya kay himoon ang usa ka object into a string pra ma pasa sa ubang computer or programming language so mao ni gamiton pra ang usa ka object sa JS mahimong string pra ma sabtan sa PHP language or ubang language. Si basically ang arguments ani niya kay ang object jd mismo but sadly kani sya dle ma apil kamo og string mismo mga properties and objects ra ang mga himong string og ma pasa.
+
+JSON.parse()
+- kani sya ang buhaton ani niya kay himoon niya ang usa ka JSON nga na string na into an object balik pra ma sabtan napd sa JS mismo ang usa ka object. So silbi g reverse ra ang g buhat sa stringtify() method. Then exmple ani kay ang php naay g labay nga code sa JS mao ni gamiton pra ma sabtan sa JS ang code nga object.
+
+localStorage
+- kani sya kay built in object pd sa JS ang gamit ani niya kay pwede ka mag strore og anything here pra dle ma delete ang variables nga naay values. To set an item into a localStorage imong gamiton lang nga methods ani niya kay kani localStorage.setItem('storageName',thenimong gustong e save (object bana, variables or unsa ba)), getItem('storageName') to retrieve a value in localStorage then removeItem().
+
+null vs undefined 
+- it works the same but ang main difference lang jd ani niya kay ang null g intentionally jd nmu nga e null ang value while ang undefined wala jd nmu g defined or g declare.
+
+Auto-Boxing 
+- kani sya kay himoon niya ang number, string and boolean into automatic nga object. So maka access napd sila og mga klaseng2 properties or methods depende sa ilang data type.
+
+Object is a Reference
+- kaning object dle jd ni sya mismo ma save sa usa ka variable kundi sa computer memory so kaning variable nga imong g save.ban sa imong object is just a reference pra ma locate tong na save nga object sa computer memory. And lastly we can't compare an object into another object so easily bisan pag same ra silag property and it's value. Kay lgeh ang usa ka object is just a reference.
+
+Destructuring
+- himoon ang usa ka property into a variable here is an example
+----Example. const object1 = {
+	name: 'Hazel',
+	price: 5000
+}
+
+const {name,price} = object1; gamit ani ma save na nmu as a variable ning name and price actually shortcut nani sya kani may original const name = object1.name;
+
+
+innerText
+- usa ni sya sa property sa HTML DOM ang gamit ani niya kay mismong text ang kuhaon bisan pag naay mga space or white space mismong text ang kuhaon.
+
+
+input value (DOM)
+- kung maka kuhag mga value ghapn sa user or input ang data type ani niya jd kay string but if you want to convert that string into number gamita lang ang number nga function.
+---Example. Number()
+
+window object
+- the window object represents the whole window/browser itself d lang kay ang webpage lang.
+
+JS style
+- ang best way pra mag style ka kay mag himo kag new class using the classList.add() then didto na dayon ka sa CSS mismo mag style pra lindot tan awon ang code kay kung sa JS ka okay raman pero ma maot tan awon imong code. Then pra mag lahi2 sya style on the button or unsa pana gamita lang ang classList.remove().
+
+Array.isArray()
+- ang gamit niya ani kay e check niya kung array ba usa ka butang or variable ang e return ani kay boolean eithier true or false.
+
+Array
+- ang array kay usa ka container sa mga values, meaning to say mapa string,number,boolean,objects,NaN,undefined man pd guro. There are built in methods nga gamit kaau sa array for example kaning .push() kani may kasagaran magamit jd then naa pd .pop() which kuhaon ang value sa last index naa pd shift() nga una value or index zero ang kuhaon naa pd unshift() og daghan pang uban naa pd property nga gamit jd kaau kaning .length e return niya ang number nga pilay sulod sa usa ka array.
+
+splice()
+- usa ni sya ka array method pra mag tang2 sa imong gusto nga value sa array ang iyang parameter ani niya kay from start to finish.
+-----Example. const myArrays = [1,4,2,'Kristian']; 
+		  myArrays.splice(0,2);
+		  console.log(myArrays)
+	//Output: ['Kristian'] kani nalang mahibilin
+
+includes()
+-- ang gamit ani niya kay e check niya ang usa ka array kung naa ba sya ani nga value. Then ang e return ani niya kay boolean either true or false.
+-----Example. const myArrays = [1,4,2,'Kristian']; 
+		   console.log(myArrays.includes(2));
+	        // Output : true   true sya kay naa may 2 sa myArrays which is naa sa index 2.
+
+array is a reference
+-- just like an object ang array kay references rapd ni sya sa computer memory dre niya direct naa ang value niya. kundi naa mismo sa computer memory.
+
+
+array.slice()
+-- ang gamit ani niya kay mag himog copy mismo sa array dle kay mag reference2 pa. 
+-----Example: const array1 = [1,2,3];
+		  const array2 = array1.slice();
+		  array2.push(4);
+		  console.log(array1);
+	        console.log(array2);
+
+		//Output
+		 [1,2,3] //sa array1 ni sya
+	       [1,2,3,4] //sa array2 ni sya kani ra mismo ang na apektohan dle apil ang array1 tunggod sa array.slice();
+
+
+Array Destructuring
+-- dba ang pag access sa mga value sa usa ka array kay mag gamit kag mga index? kani dre pwede ka mag destructuring same sa object dre aning array. pwede nmu ma kuha ang mga value sa array gamit ang mga variable name nga naa sa ubos nga example if gusto nmu first value lang 1 ka variable lang imong e declare then if gusto kag 2nd value either ang first value nmu kay e assign nmug variable or d kaya mag ,(coma) lang ka then variableName dayon. If you want the third value of an array ra imong kuhaon just use 2 commas then variable name. Basta ang rule dle mo lapas then comma lang if you want to get the special value ana nga array. kay kung 1 variable name ra imong gamiton ang index 0 ra imong ma kuha. 
+------Example: const array1 = [1,2,3];
+		   const firstValue = array1[0];
+		   console.log(firstValue);
+		 // Output 
+		    1 
+
+		// Shorthand or Array Destructuring
+		   const [variableName,secondValue,ThirdValue] = [1,2,3]
+		   console.log(secondValue);
+		
+		//Output
+		 	2 // Mao ni ang second value
+
+
+break
+-- pwede ta mo gawas sa loop an early as possible gamit ani og ang condition.
+----Example: for(let i = 1; i <= 10; i++){
+			console.log(i);
+			if(i === 8){
+				break;
+			}
+		}
+
+	//Output
+		1
+		2
+		3
+		4
+		5
+		6
+		7
+		8 // ning stop sya sa 8 kay ga condition tag if ang i is naa na sa 8 atong e break or stop na ang loop.
+
+continue
+-- ang buhaton niya ani kay iyang e skip og iterate og kas a depende sa iyang condition.
+----Example: for(let i = 1; i <= 10; i++){
+		if(i === 3){
+			continue;
+		}
+		console.log(i)
+	}
+
+//Output
+	1
+	2
+	4
+	5
+	6
+	7
+	8
+	9
+	10 //iyang g skip ang 3 kay mao may condition which if mag 3 na ang i iyang e skip ang iteration gamit ang continue nga word.
+
+while continue
+-- if mag gamit kag continue sa while dapat mag iterate ka manually kay kung dle ma hulog ka sa infinite loop.
+------Example: 
+			let i = 1;
+			while(1 <= 10){
+			if(i % 3 === 0){
+				i++;
+				continue
+		}
+			console.log(i);
+			i++;
+	}
+
+
+	//Output
+		1
+		2
+		4
+		5
+		7
+		8
+		10
+
+return is another way to break a loop inside a function
+--- gamit ang return nga word pwede pd ka mag stop og usa ka loop as early as possible. sa karon kani nga loop kay naa sa sulod sa function sa atong g return rapd sya. gamit pd ang condition maong na stop og sayo ang loop og nag return og value.
+--Example 
+
+		function doubleArrays(array){
+		const myArrays = [];
+
+		for(let i = 0; i < array.length; i++){
+				if(array[i] === 0){
+					return myArrays;
+			}
+			myArrays.push(array[i] * 2);
+		}
+		return myArrays;
+	}
+
+const numbers = [1,2,4,0,5];
+console.log(doubleArrays(numbers));
+
+//Output
+2,4,8 // mao ra ni sya wala na sya ning padayon sa 5 kay naa sa condition sa atong function og sa loop nga if ang index nga naay value nga 0 iyang e return ang myArrays nato. gamit ang ang return na stop og sayo ang loop.
+
+
+functions are values
+---yes ang functions kay pwede pd sya values or mag store og values just like numbers, strings, boolean and so much more.
+-----Example: 
+		const function1 = function greeting(){
+			console.log('hello');
+}
+
+
+anonymous function
+--- usa ni sya ka function nga wlay name mismong anonymous jd sya pero mo exist rani if imong function g store nmu sa usa ka variable.
+----Example:
+			const function1 = function(){
+				console.log('hello');
+}
+
+			 function1(); 
+			 hello    		// mao ni ang output niya then if mo tawag kag function nga g store nmu sa usa ka variable katong variable na mismo imong tawgon then butngan lang nmu og a pair of parenthesis.
+
+
+function shortcut
+--- actually kaning g na gamit na nato atong una nga mag tawag og mga functions shortcut na diay to.
+-----Example:
+			function myName(){
+			console.log('Kristian');
+}	
+
+			myName();
+			Kristian   //mao ni ang output niya
+
+			
+hoisting
+--- kani sya term ni sya sa function which means bisan pag naa sa ubos ang function then imong g tawag ang function taas pa ato or una pa dle na mag matter mo gana ghapon. Then kani sya mo gana rani sya sa mga shortcut nga functions dle sa mga functions nga g store sa usa ka variable.  
+---Example:
+		greetMe();
+		function greetMe(){
+		console.log('Hello');
+}      
+
+	Explanation:
+			as you can see murag naay something wrong dba? g tawag niya ang function before sa pag initialize sa function which is dle unta sakto pero kani dre mo gana ghapon ni sya basta shortcut nga function it will still run. Makita nmu sa console ang Hello. Pero kani sya dle nani mo gana once ang imong function g store na nmu sa usa ka variable mo error na sya og mo inggon nga dle nmu pwede ma tawag kani nga function before sa pag initialize so meaning if tawgon to nmu nga function nga g store nmu sa usa ka variable dapat ubos ato niya or after sa pag declare nmu sa function didto na nmu sya tawgon.
+
+----Example:
+
+		const myFunction1 = function(){
+		console.log('Hello World')
+}
+
+		myFunction1();
+		Hello World  	//mao ni ang output
+
+
+passing a value into a function
+--- mao ni sya tong mga parameters and arguments.
+----Exmaple:
+			function display(param){
+			console.log(param)
+}
+
+			display('Hello World);
+	//Output:	Hello World
+
+--Explanation: nag himo tag function with a name of display then it has a parameter of param then sulod ani nga function atong g console.log ang param then atong g tawag ang atong display function then ga pass tag value nga Hello World nga string. so ang output ani niya kay Hello World
+
+
+pass a function into another function (callback)
+--- medyo libog sya sabton dba? pero sayon ra sya actually ang nahitabo ra ani nag pass kag function as an argument sa usa ka function.
+-----Example:
+			function run(param){
+			param();
+}
+			
+			run(function(){
+				console.log('Hello Kristian');
+});
+
+
+---Explanation: una nag himo tag run function with a parameter of param then sulod ani nga function ato rang g tawag ang param as a function or method maong param(); Then sunod ani atong g tawag ang run nga function then nag pass tag function napd as an argument kani nga function kay anonymous function naman tali ni then sulod ani nga function nag console.log ta og Hello Kristian nga string. so na execute ning argument function nato tunggod kay didto sa run function atong g tawag na ang param(); nga parameter as a function. Mao ni g tawag nga callback. usa ka function g pass as an argument sa usa napd ka function.
+
+
+setTimeout() (Asynchronous code)
+--- allows us to run a function in the future. usa ni sya ka built in method sa javascript nga ang purpose ani niya kay magpa run og function in the future or after sa g set nmu nga time as millisecond. (Remember 1000 = 1)
+---Example: 
+		setTimeout(function(){
+		console.log('Hello World');
+},3000);
+
+		console.log('next line')
+
+---Explanation: ang kaning setTimeout nga method kay naay duha ka parameter first is the function nmu nga imong pass then second value kay kaning millisecond (or kadugayon usa nmu e run ang function). So ang nahitabo ani nga code sa taas nag hulat pa daan og 3 seconds usa g run ang function nga nag console.log('Hello World'); so after 3 seconds ma execute na dayon ning functiona. Then kani nga function or code kay g tawag nga asynchronous code meaning ani niya kay dle niya hulaton nga mahuman ang code so silbi ang nahitbo aning code nga naa sa example kay una igo ra nag set og time si setTimeout nga method then ning adto na dayon sya sa lain line pra e execute ang code nga next line then after 3 seconds ning balik napd sya sa  taas pra e execute ang hello world nga string sa console.
+
+Asynchronous Code
+---- so follow up nalang pd ni sya ang advantage pd ani niya kay dle niya hulaton nga mo execute ang code after pila ka seconds kundi mo adto sya sa lain nga line of code pra e execute tong mga code una then after sa timer nga g set didto na dayon sya mo balik pra e run tong code niya.
+---Exmaple:
+		in real life murah raning ga set kag alarm clock or timer dba sa sulod atong time nga g set wla pd ka ning hunong man? dba naa kay lain g buhat pd dle lang ga hulat nga mo tinggog tong timer nga g set nmu. inggon ana rapd ning asynchronous code.
+
+Synchronous Code
+---- hulaton niya ang mahuman or ma execute ang code line by line.
+
+
+setInterval()
+--- same2 rani sya sa setTimeout() nga method nga asynchronous pd pero ang naka lahi lang jd ani niya kay iyang ipa dayon og run ang set of code or ang code sulod ato nga function every mo labay tong timer nga imong g set. And lastly, kaning setInterval nga method kay naa ni sya e return nga number so pwede nmu ni sya e save sa usa ka variable kay naa sya e return the magamit nmu ni sya pra e stop ang interval gamit ang clearInterval method.
+---Example:
+		setInterval(function(){
+		console.log('interval')
+},3000);
+
+--Explanation: ang buhaton ani niya mag set daag syag timer nga 3 seconds then e execute niya ang line of codes atong sulod sa iyang function then it will keep running every 3 seconds. So meaning kaning g console.log nga interval nga string mo run ni sya every after 3 seconds.
+
+
+forEach() (array method)
+---- built-in method ni sya sa array pra e loop niya og e display tagsa2 ang or ma access niya tagsa2 ang usa ka array. Kani nga method kay ang paramater ani niya kay mag pass og another function then kaning function nga g pass niya kay naa pd syay parameter which is 2 paramater the value and index.
+------Example:
+			const myArrays = ['tulog','kaon','repeat'];
+			myArrays.forEach(function(values,index){
+			console.log(`${index} = ${values}`)
+});	
+
+		//Output: 
+			  0 = tulog
+			  1 = kaon
+			  2 = repeat
+---Explanation:
+	- ang nahitabo ani kay nag declare tag array of strings then kani nga array atong g loop gamit ang method nga forEach() then kaning foreach method kay ang parameter niya kay function pd sa dapat mag pass kag function ani niya then kani nga function pd nga imong e pass kay naa pd ni own parameter, actually 2 parameters first is the value and the second is the index. so ma sabtan raman guro no unsa ni sya nga mga parameters dapat d ni sya mag bali2 dapat kani jd ang format una ang value then ika duha ang index. gamit ani ma access nmu ang value and index ani myArrays nmu. Then makita nato sa atong example nga g console.log nato ang index and values gamit ang template literals.
+
+return forEach()
+---- kani sya murah ni syag continue nga mo skip syag iterate depende sa iyang condition. Then sa foreach wlay break or dle ka pwede mo gamit og break if mo gamit kag break maypa for loop imong gamiton.
+-----Example:
+			const myArrays = ['sleeping','wash dishes','watching youtube'];
+			myArrays.forEach(function(value,index){
+			if(value === 'sleeping'){
+			return value;
+	}
+			console.log(`${index} = ${value}`);
+});
+
+
+		//Output
+			1 = wash dishes
+			2 = watching youtube
+
+Explanation:
+		nag himo tag array of strings then atong g loop gamit ang forEach nga method then nag pass tag function sa foreach then kani nga function naa pd parameters nga values and index then sa atong code nag conidtion ta nga if ang value daw kuno equals (===) sleeping atong e return ang value so meaning ani iyang pangitaon ang naay value nga sleeping pra e skip niya so ang sleeping kay naa man sa index 0 iyang g skip og ning diretso sya sa index 1 nga wash dishes then ning padayon sa next index kay loop mani sya.
+
+
+Arrow Functions ( () => {} )
+--- shorter way of regular function so silbi shortcut napd ni sya then naa pd ni syay mga shortcut basta kani ra imong timan-an first if 1 ra ang parameter no need na ang parenthesis then second if 1 line ra ang code no need na ang curly brace and the return statement.
+------Example:
+			const arrowFunction = () => {
+			console.log('hello');
+}
+			
+			arrowFunction();
+		//Output
+			hello   //mao ni ang regular nga arrow function or normal nga arrow function.
+
+
+----Example2:
+			const oneParam = param =>{
+			console.log(`Hello ${param}`)
+}
+
+			oneParam('Kristian');
+		//Output
+			Kristian // mao ni ang example sa shortcut sa arrow function nga usa ra ang parameter.
+
+----Example3:
+			
+			const oneLine = () => 5 + 5;
+			oneLine();
+
+			//Output
+			10 //then mao pd ni ang example sa oneline nga arrow function nga wla nay curly braces og return statement.
+
+
+-- recomended ang arrow function pra sa mga passing an function or argument sya like example kani.
+
+setInterval(()=>{
+	console.log('Hello');
+},1000);
+
+---Explanation: like kani nga example the best ang arrow function sa mga inggon ani nga situation. Nga argument ang usa ka function sa usa ka method.
+
+
+addEventListener() Method
+--- kani sya ang shortcut sa onclick or any event attributes sa html mas preferable nga gamiton ni kaysa katong attribute2 lang kay ani nga method pwede ka mag gamit og pila ka eventListener for that certain html element or button. Then kani nga method naay duha ka arugments which is the events, second is the function nga e run niya mismo.
+------Example:
+			let myButton = document.querySelector('.myButton');
+			myButton.addEventListener('click',()=>{
+			console.log('hello');
+});
+
+		//Output
+			hello // mao ni common nga addEventListener
+
+----Example2:
+			let myButton = document.querySelector('.myButton');
+			const myArrowFunction = ()=>{
+			console.log('hello');
+};
+
+			myButton.addEventListener('click',myArrowFunction);
+---Explanation:
+		- it works the same way nga g sulod nmug variable ang arrow function. after clicking the button it will log on the console hello. but pra nako kani sya nga technique or pama agi medyo langay pero at bright side of it pwede raman ghapon kay ma gamit nmug balik2 kana nga method using the variable. dle naka mag himo2 pag arrow function sa addEventListener nga method.
+
+
+----Example3:
+
+			let myButton = document.querySelector('.myButton');
+			const myArrowFunction = ()=>{
+			console.log('hello');
+};
+
+			myButton.addEventListener('click',myArrowFunction);
+			myButton.removeEventListener('click', myArrowFunction);
+			myButton.addEventListener('click',()=>{
+			console.log('clicked2');
+});
+
+----Explanation:
+			as you can see sa usa lang ka button daghan tag g buhat nga eventListener nag add ta then ga remove pero kani nga code ani nga example ang makita ra jd sa console ani kay kaning nag log og clicked2 why? because makita nmu sa atong code ang unang eventListener nato nga g add kay atong g remove. So maong kaning ika 3 nga eventListener ra ang ning run. Mao ni naka lindot sa eventLisner nga method kay pwede ta mo gamit og multiple eventListeners in just a single html element or button.
+
+
+filter() Method
+--- kani nga method kay pang array ang gamit ani niya kay mag return og new array depende sa imong condition. Dle niya hilabtan ang orignal array kundi kato ra mismong condition nga imong g set then iyang e save or e return maong kani sya e save ni sya og usa ka variable.
+------Example:
+			let myArrays = [1,-3,5];
+			myArrays = myArrays.filter((value,index)=>{
+			return value >= 0;
+});
+
+			console.log(myArrays);
+		//Output
+			[1,5] 
+
+---Explanation:
+		- mao ni syay usa ka example sa array filter method which is mag return syag new array depende sa imong g set nga condition ani nga example nag condition ta nga e return nato ang mga positive numbers sa array. Then kani sya dapat sya e save sa another value pra naay kasudlan ang g return nmu.
+
+
+map() Method
+--- kani sya kay another array method pd ni sya ang buhaton ani niya kay mag create og new array sa original nmu nga array then e return niya tong g pa return nmu dpeende sa imong gusto sa new array.
+----Example: 
+			let myArrays = [1,4,5];
+			myArrays = myArrays.map((value,event)=>{
+			return value * 2;
+});
+		    	console.log(myArrays);
+		//Output
+			[2,8,10];
+
+---Explanation:
+		- ang nahitabo dre aning example nato kay nag create tag copy sa atong new array then atong g return ang value nga times 2 na. So mahitabo ani ang value sa new arrays nato ani kay mo double na from 1,4,5 to 2,8,10.
+
+
+
+Modules
+---- ang gamit ani niya kay pra dle ka magka naming conflict like sa usa ka variable dle mag balik2 kay naa jd tendency nga maka declare kag variable name nga ga exist na pra ma iwasan ni kani imong gamiton. First is gamiton nmu ang type attribute sa script tag kung aha ang mga code nmu sa js. Then second is mo adto ka sa file sa js kung aha nmu gusto nmu e export ang usa ka variable. Then 3rd and lastly, mo adto ka sa main file sa js nga naa didto imong code pra imong e import. Then need pd ni syag live server pra mo gana ang modules. if wla dle jd ni mo gana sya.
+
+---Step 1:
+		<script type='module' src='script/amajon.js'></script>
+
+-- kani ang first nmung buhaton which is e declare nmu ni nga file as a module gamit ang type nga attribute.
+
+---Step 2:
+		export const cart = [];
+
+--- gamit ang export nga keyword pwede nmu ni ma export kani nga specific variable. Dapat tapad ra sa variable ang export keyword.
+
+---Step 3:
+		import {variableName} from 'filePath';
+
+--- gamit ang import pwede na nmu ma kuha ang usa ka variable nga imong g export sa usa ka file.Then dapat naa jd ni sa pinaka taas or line 1 nga code kay same sa mga syntax ang ruling ani if gamiton or tawgon nmu ni nga varible nga wla pa sya dle jd ni mo gana or undefined or magka error jd ka.
+
+
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            height: 100vh;
+        }
+
+        div{
+            
+        }
+        button{
+            height: 60px;
+            width: 60px;
+            border-radius: 60px;
+            border: none;
+            font-size: 26px;
+            cursor: pointer;
+            margin-right: 5px;
+            color: white;
+            background-color: rgb(51, 51, 51);
+        }
+
+        .operator{
+            background-color: rgb(254, 160, 10);
+
+        }
+
+        .clear{
+            font-size: 15px;
+        }
+
+        .show{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="show"></p>
+        <button class="num1">1</button>
+        <button class="num2">2</button>
+        <button class="num3">3</button>
+        <button class="plus operator">+</button><br><br>
+        <button class="num4">4</button>
+        <button class="num5">5</button>
+        <button class="num6">6</button>
+        <button class="minus operator">-</button><br><br>
+        <button class="num7">7</button>
+        <button class="num8">8</button>
+        <button class="num9">9</button>
+        <button class="multiplication operator">*</button><br><br>
+        <button class="num0">0</button>
+        <button class="decimal">.</button>
+        <button class="equals">=</button>
+        <button class="division operator">/</button><br><br>
+        <button class="clear">Clear</button>
+    </div>
+
+    <script>
+        let calculation = '';
+        let num1 = document.querySelector('.num1');
+        let num2 = document.querySelector('.num2');
+        let num3 = document.querySelector('.num3');
+        let num4 = document.querySelector('.num4');
+        let num5 = document.querySelector('.num5');
+        let num6 = document.querySelector('.num6');
+        let num7 = document.querySelector('.num7');
+        let num8 = document.querySelector('.num8');
+        let num9 = document.querySelector('.num9');
+        let num0 = document.querySelector('.num0');
+        let decimal = document.querySelector('.decimal');
+        let division = document.querySelector('.division');
+        let multiplication = document.querySelector('.multiplication');
+        let minus = document.querySelector('.minus');
+        let plus = document.querySelector('.plus');
+        let equals = document.querySelector('.equals');
+        let show = document.querySelector('.show');
+        let clear = document.querySelector('.clear');
+
+
+        let retrieveCalculation = localStorage.getItem('calculation') || 0;
+        show.innerHTML = retrieveCalculation;
+
+        num1.addEventListener('click', function() {
+            calculation += '1';
+            show.innerHTML = calculation;
+        });
+
+        num2.addEventListener('click', function() {
+            calculation += '2';
+            show.innerHTML = calculation;
+        });
+
+        num3.addEventListener('click', () =>{
+            calculation += '3';
+            show.innerHTML = calculation;
+        });
+
+        num4.addEventListener('click', function() {
+            calculation += '4';
+            show.innerHTML = calculation;
+        });
+
+        num5.addEventListener('click', function(){
+            calculation += '5';
+            show.innerHTML = calculation;
+        });
+
+        num6.addEventListener('click', function(){
+            calculation += '6';
+            show.innerHTML = calculation;
+        });
+
+        num7.addEventListener('click', function(){
+            calculation += '7';
+            show.innerHTML = calculation;
+        });
+
+        num8.addEventListener('click', function(){
+            calculation += '8';
+            show.innerHTML = calculation;
+        });
+
+        num9.addEventListener('click', function(){
+            calculation += '9';
+            show.innerHTML = calculation;
+        });
+
+        num0.addEventListener('click', function(){
+            calculation += '0';
+            show.innerHTML = calculation;
+        });
+
+        plus.addEventListener('click', function() {
+            calculation += '+';
+            show.innerHTML = calculation;
+        });
+
+        minus.addEventListener('click', function() {
+            calculation += '-';
+            show.innerHTML = calculation;
+        });
+
+        multiplication.addEventListener('click',function(){
+            calculation += '*';
+            show.innerHTML = calculation;
+        });
+
+        division.addEventListener('click', function(){
+            calculation += '/';
+            show.innerHTML = calculation;
+        });
+
+        decimal.addEventListener('click', function(){
+            calculation += '.';
+            show.innerHTML = calculation;
+        });
+
+        equals.addEventListener('click', () =>{
+            // check if calculation has decimal or (.)
+            if(calculation.includes('.')){
+                    calculation = eval(calculation);
+                    let result = Number(calculation).toFixed(2);
+                    show.innerHTML = result;
+                    localStorage.setItem('calculation', result);
+            }else{
+                calculation = eval(calculation);
+                // let result = Number(calculation).toFixed(2);
+                show.innerHTML = calculation;
+                localStorage.setItem('calculation', result);
+            }
+        })
+
+        clear.addEventListener('click',()=>{
+            localStorage.removeItem('calculation');
+            show.innerHTML = calculation;
+            window.location.reload();
+        })
+
+    </script>
+</body>
+</html>

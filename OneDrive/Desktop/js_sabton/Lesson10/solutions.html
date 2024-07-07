@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart {
+            padding: 10px 50px;
+            border: none;
+            border-radius: 50px;
+            background-color: rgb(255, 216, 20);
+            font-weight: bold;
+        }
+
+        div button {
+            padding: 10px 20px;
+            border: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .requestButton {
+            background-color: black;
+            color: white;
+        }
+
+        .scheduleButton {
+            background-color: rgb(230, 230, 230);
+        }
+
+        .clickMe {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .is-toggled {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 10a -->
+    <button class="cart">Add to Cart</button>
+    <br><br>
+    <!-- 10b -->
+    <div>
+        <button class="requestButton">Request Now</button>
+        <button class="scheduleButton">Schedule for Later</button>
+    </div>
+    <br>
+    <br>
+    <!-- 10c -->
+    <button class="js-buttons">Test</button>
+
+    <br><br>
+    <!-- 10d -->
+    <button class="clickMe">Gaming</button>
+    <button class="clickMe">Music</button>
+    <button class="clickMe">Tech</button>
+
+
+    <script>
+        // 10c
+        let testButton = document.querySelector('.js-buttons');
+
+        if (testButton.classList.contains('js-button')) {
+            console.log('true');
+        } else {
+            console.log("Error na");
+        }
+
+        // 10d
+        let clickMe = document.querySelectorAll('.clickMe');
+        console.log(clickMe);
+        clickMe.forEach((button) => {
+            button.addEventListener('click', function () {
+                // if(button.classList.contains('is-toggled')){
+                //     button.classList.remove('is-toggled');
+                // }else{
+                //     button.classList.add('is-toggled');
+                // }
+                clickMe.forEach((btn) => {
+                    btn.classList.remove('is-toggled');
+                });
+
+                // Add the 'is-toggled' class only to the clicked button
+                if (button.classList.contains('is-toggled')) {
+                    button.classList.remove('is-toggled');
+                } else {
+                    button.classList.add('is-toggled');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

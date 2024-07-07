@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 4px;
+            border: 2px solid black;
+        }
+        .cart{
+            background: yellow;
+        }
+        .buy{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>Adults Plain Cotton T-shirt</p>
+    <p>Price: $7.99</p>
+    <button class="cart">Add to cart</button>
+    <button class="buy">Buy now</button>
+</body>
+</html>
+
+<script>
+    let cart = document.querySelector(".cart");
+    let buy = document.querySelector(".buy");
+
+    cart.addEventListener("click", function(){
+        setTimeout(function(){
+            alert('Added');
+        }, 2000);
+    });
+
+    buy.addEventListener("click", function(){
+        console.log('Loading...');
+        setTimeout(function(){
+            alert('Purchased');
+        }, 2000);
+    });
+</script>

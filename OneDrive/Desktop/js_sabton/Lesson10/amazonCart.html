@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM) Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Poppins','sans-serif';
+            margin: 0;
+            padding: 0;
+        }
+
+        .shipping{
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .calculate{
+            padding: 11px;
+            background-color: green;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .warning{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = Free Shipping.</p>
+        <input type="text" class="shipping" placeholder="Cost of order">
+        <input type="submit" class="calculate">
+        <p class="total"></p>
+    </div>
+
+    <script>
+        const calculate = document.querySelector('input[type="submit"]');
+        let total = document.querySelector('.total');
+        let shipping = document.querySelector('.shipping');
+
+
+    
+        
+
+        function calculateShipping(){
+            let shippingFee = Number(document.querySelector('.shipping').value);
+            if(isNaN(shippingFee)){
+                total.classList.add('warning');
+                total.innerHTML = `Please enter a valid number.`;
+            }else if(shippingFee < 0){
+                total.classList.add('warning');
+                total.innerHTML = `Error: cost cannot be less than $0`;
+            }else if(shippingFee >= 40){
+                shippingFee = shippingFee;
+                // console.log(typeof price);
+                total.innerHTML = `Total payment is ${shippingFee} with free shipping.`;
+            }else{
+                let result = shippingFee + 10;
+                total.innerHTML = `Total payment is $${result} with $10 shipping fee.`;
+            }
+        };
+
+
+        calculate.addEventListener('click', function(){
+            calculateShipping();
+        });
+
+        shipping.addEventListener('keydown',function(event){
+            console.log(event.key);
+            if(event.key === 'Enter'){
+                calculateShipping();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p span{
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 2px;
+        }
+        button{
+            background: red;
+            color: white;
+            border: none;
+            padding: 4px 6px;
+        }
+    </style>
+</head>
+<body>
+    <button class="hello">hello</button>
+    <p>paragraph of <span>hello</span> text</p>
+</body>
+</html>
+<script>
+    let hello = document.querySelector('.hello');
+    hello.addEventListener('click', function(){
+        alert('hello');
+    })
+
+    console.log(2+2);
+</script>
