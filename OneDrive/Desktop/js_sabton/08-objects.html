@@ -69,17 +69,35 @@
         // console.log(object2.name);
 
         // console.log(object2 === object1);
-        const myObject = {
-            name: 'Kristian',
-            rating : {
-                price: '30',
-                something:{
-                    kiss: true,
-                    hug: false
-                }
-            }
-        }
-        console.log(myObject.rating.something.hug);
+        // const myObject = {
+        //     name: 'Kristian',
+        //     rating : {
+        //         price: '30',
+        //         something:{
+        //             kiss: true,
+        //             hug: 'untwa'
+        //         }
+        //     }
+        // }
+        // console.log(myObject.rating.something.hug);
+        const object4 = {
+            message : "Hello World!",
+            name : "Kristian"
+        };
+        const {message,name} = object4;
+        console.log(name);
+
+        const object5 = {
+            message,
+            method : function function1(){
+                console.log('This is method');
+            },
+            function2(){
+                console.log("This is a shorthand method");
+            },
+        };
+
+        object5.function2();
     </script>
 </body>
 </html>

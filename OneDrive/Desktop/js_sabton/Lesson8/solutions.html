@@ -7,65 +7,79 @@
 </head>
 <body>
     <script>
-        // 8a 8c
-        const basketball = {
-            name: 'basketball',
-            price: 2095,
-        }
+        // // 8a 8c
+        // const basketball = {
+        //     name: 'basketball',
+        //     price: 2095,
+        // }
 
-        console.log(basketball.name);
-        console.log(basketball.price);
-        // 8b
-        basketball.price = 2095 + 500;
-        console.log(basketball.price);
+        // console.log(basketball.name);
+        // console.log(basketball.price);
+        // // 8b
+        // basketball.price = 2095 + 500;
+        // console.log(basketball.price);
 
-        //8c
-        basketball['delivery-time'] = '3 days';
-        console.log(basketball['delivery-time']);
+        // //8c
+        // basketball['delivery-time'] = '3 days';
+        // basketball.new = "new ni sya";
+        // console.log(basketball);
+        // console.log(basketball['delivery-time']);
 
-        // 8d
-        function comparePrice(product1,product2){
-            const products1  = {
-                name: 'ball',
-                price:product1
-            }
+        // // 8d
+        // function comparePrice(product1,product2){
+        //     const products1  = {
+        //         name: 'ball',
+        //         price:product1
+        //     }
 
-            const products2 = {
-                name: 'dress',
-                price:product2
-            }
+        //     const products2 = {
+        //         name: 'dress',
+        //         price:product2
+        //     }
 
-            if(products1.price < products2.price){
-                return products1.name;
-            }
+        //     if(products1.price < products2.price){
+        //         return products1.name;
+        //     }
 
-            if(products2.price < products1.price){
-                return products2.name;
-            }
-        }
+        //     if(products2.price < products1.price){
+        //         return products2.name;
+        //     }
+        // }
 
-        console.log(comparePrice(200,300));
+        // console.log(comparePrice(200,300));
 
         // 8e
-        function isSameProduct(product1,product2){
+        function isSameProduct(){
             const products1  = {
                 name: 'ball',
-                price:product1
+                price:200
             }
 
             const products2 = {
                 name: 'dress',
-                price:product2
+                price:300
             }
 
-            if(products2.price === products1.price){
-                return true;
+            const product3 = products1;
+
+
+
+            if(product3 === products1){
+                return true
             }else{
                 return false;
             }
+
+            // if(products2.price === products1.price){
+            //     return true;
+            // }else{
+            //     return false;
+            // }
         }
 
-        console.log(isSameProduct(200,100));
+        console.log(isSameProduct());
+
+        // console.log(isSameProduct(200,100));
 
         //8f
         console.log('Good Morning'.toLowerCase());
