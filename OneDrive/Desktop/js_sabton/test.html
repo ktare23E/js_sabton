@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let test = [
+            {id: 1, value: 100},
+            {id: 2, value: 100},
+            {id: 1, value: 300},
+            {id: 3, value: 150},
+            {id: 2, value: 50}
+        ];
+
+        let total = {};
+        test.forEach(item => {
+            if(!total[item.id]){
+                total[item.id] = 0;
+            }
+            total[item.id] += item.value;
+        });
+        console.log(total);
+
+    </script>
+</body>
+</html>
