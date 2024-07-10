@@ -60,7 +60,13 @@
         <input type="submit" class="calculate">
         <p class="total"></p>
     </div>
-
+    <input type="number" name="" id="" class="test">
+    <input type="submit" value="try na" class="testSubmit">
+    <script>
+        document.querySelector('.testSubmit').addEventListener('click',function(){
+            console.log(typeof document.querySelector('.test').value);
+        })
+    </script>
     <script>
         let subscribe = document.querySelector('.subscribe');
         const calculate = document.querySelector('input[type="submit"]');
@@ -85,12 +91,13 @@
             if(isNaN(shippingFee)){
                 total.innerHTML = `Please enter a valid number.`;
             }else if(shippingFee >= 40){
-                shippingFee = shippingFee;
+                // shippingFee = shippingFee;
                 // console.log(typeof price);
                 total.innerHTML = `Total payment is ${shippingFee} with free shipping.`;
             }else{
-                let result = shippingFee + 10;
-                total.innerHTML = `Total payment is $${result} with $10 shipping fee.`;
+                // let result = shippingFee + 10;
+                shippingFee += 10;
+                total.innerHTML = `Total payment is $${shippingFee} with $10 shipping fee.`;
             }
         };
 
