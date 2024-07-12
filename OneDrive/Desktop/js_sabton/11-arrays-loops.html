@@ -7,6 +7,33 @@
 </head>
 <body>
     <script>
+        // let myArrays = [1,'wow',NaN,undefined,false,{name:"Kristian",age:24},[1,2,3]];
+        // myArrays.forEach(value =>{
+        //     if( typeof value === 'object' && !Array.isArray(value)){
+        //         for(let i in value){
+        //             console.log(i + ":" + value[i]);
+        //         }
+        //     }else if(Array.isArray(value)){
+        //         value.forEach(innerValue => {
+        //             console.log(innerValue);
+        //         })
+        //     }
+        // });
+
+        // console.log(myArrays.length);
+
+        let myArrays = [1,2,3,4,5];
+        // myArrays.forEach((value,index) => {
+        //     if(value === 4){
+        //         myArrays.splice(index,1)
+        //     }
+        // });
+
+        // console.log(myArrays);
+
+        let newArray = myArrays.filter(value => value !== 4)
+        console.log(newArray);
+            // console.log(myArrays);
     //     let myArrays = [23,true,NaN,undefined,null];
     //     myArrays.push('Kristian');
     //     myArrays.splice(1,4)

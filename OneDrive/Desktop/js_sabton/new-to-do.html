@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create a todo list!</h1>
+    <div>
+        <input class="to-do" type="text">
+        <input type="date" class="date">
+        <button class="submit">submit</button>
+
+    </div>
+    <div class="display"></div>
+    <script>
+        let display = document.querySelector('.display');
+        document.querySelector('.submit').addEventListener('click',()=>{
+            let myArrays = [];
+            let todo = document.querySelector('.to-do').value;
+            let date = document.querySelector('.date').value;
+
+            myArrays.push({
+                todo,
+                date
+            });
+
+            let output = ';'
+
+            myArrays.forEach(value => {
+                if(typeof value === 'object' && !Array.isArray(value)){
+                    for(let i in value){
+                        output += `${value[i]}`;
+                    }
+                }
+            });
+
+            todo.value = '';
+            date.value = '';
+        })
+    </script>
+</body>
+</html>

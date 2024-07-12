@@ -15,6 +15,7 @@
             {id: 2, value: 50}
         ];
 
+        let emptyArr = [];
         let total = {};
         test.forEach(item => {
             if(!total[item.id]){
@@ -22,7 +23,18 @@
             }
             total[item.id] += item.value;
         });
-        console.log(total);
+        // let result = [];
+        // for (let i in total){
+        //     result.push(total[i]);
+        // }
+
+        // console.log(result);
+
+        for (let i in total){
+            if(total.hasOwnProperty(i)){
+                console.log(i + ':' +total[i]);
+            }
+        }
 
     </script>
 </body>
