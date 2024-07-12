@@ -16,28 +16,43 @@
     <div class="display"></div>
     <script>
         let display = document.querySelector('.display');
+
+        function displayData(todos){
+            
+            let output = '';
+
+            todos.forEach(value => {
+                output += `Todo: ${value.todo}, date: ${value.date} <br>`; 
+
+                // if(typeof value === 'object' && !Array.isArray(value)){
+                //     for(let i in value){
+                //     }
+                    
+                // }
+            });
+            display.innerHTML = output;
+
+        }
+
+        let todos = JSON.parse(localStorage.getItem('todo')) || [];
+        displayData(todos);
+
         document.querySelector('.submit').addEventListener('click',()=>{
-            let myArrays = [];
             let todo = document.querySelector('.to-do').value;
             let date = document.querySelector('.date').value;
 
-            myArrays.push({
-                todo,
-                date
-            });
+            if(todo && date){
+                todos.push({todo,date});
+                localStorage.setItem('todo',JSON.stringify(todos));
+     
+                displayData(todos);
 
-            let output = ';'
+                document.querySelector('.to-do').value = '';
+                document.querySelector('.date').value = '';
+            }else{
+                alert('Please fill the fields!');
+            }
 
-            myArrays.forEach(value => {
-                if(typeof value === 'object' && !Array.isArray(value)){
-                    for(let i in value){
-                        output += `${value[i]}`;
-                    }
-                }
-            });
-
-            todo.value = '';
-            date.value = '';
         })
     </script>
 </body>
