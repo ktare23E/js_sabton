@@ -112,50 +112,46 @@
 
 
 //11k return all the greater than 0 
-function positiveNumber(array){
-    let count =0;
-    for(let i = 0; i < array.length; i++){
-        if(array[i] > 0){
-            count++;
-        }
-    }
-    return count;
-}
-
-let myArrays = [4,-2,2,17,-92,-27];
-console.log(positiveNumber(myArrays));
-
-// 11l and 11m
-// function findSmallestAndLargest(arr) {
-
-    
-//     if(arr.length === 0){
-//       return null;
-//     }
-    
-//     let smallest = arr[0];
-//     let largest = arr[0];
-
-    
-
-//     for (let i = 1; i < arr.length; i++) {
-//         if (arr[i] < smallest) {
-//             smallest = arr[i];
-//         } else if (arr[i] > largest) {
-//             largest = arr[i];
-          
+// function positiveNumber(array){
+//     let count =0;
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] > 0){
+//             count++;
 //         }
 //     }
-//     const myObject = {
-//         smallest,
-//         largest
-//     }
-
-//     return myObject;
+//     return count;
 // }
 
-// let myArrays = [1,-10,-4,0,14]
-// console.log(findSmallestAndLargest(myArrays));
+// let myArrays = [4,-2,2,17,-92,-27];
+// console.log(positiveNumber(myArrays));
+
+// 11l and 11m
+function findSmallestAndLargest(arr) {
+
+    
+    let smallest = arr.length !== 0 ? arr[0] : null;
+    let largest = arr.length !== 0 ? arr[0] : null;
+
+    
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        } else if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    const myObject = {
+        smallest,
+        largest
+    }
+
+    return myObject;
+}
+
+let myArrays = [3]
+console.log(findSmallestAndLargest(myArrays));
 
 // 11n count words
 // function countWords(arr) {
