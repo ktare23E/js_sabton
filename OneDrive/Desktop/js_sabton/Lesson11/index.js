@@ -19,19 +19,21 @@ const myArrays = [10,20,30];
 
 //11c
 
-// function arraySwap(myArrays){
-//     if(myArrays.length >= 2){
-//         let temp = myArrays[0];
-//         myArrays[0] = myArrays[myArrays.length-1];
-//         myArrays[myArrays.length-1] = temp;
-//     }
-//     return myArrays;
-// }
+function arraySwap(myArrays){
+    if(myArrays.length >= 2){
+        let temp = myArrays[0];
+        myArrays[0] = myArrays[myArrays.length-1];
+        myArrays[myArrays.length-1] = temp;
+        return myArrays;
+    }else{
+      return "You need an array with more than 2 length";
+    }
+}
 
-// let myArrays = [1,2,3,4,5];
+let myArr = [1];
 
 
-// console.log(arraySwap(myArrays));
+console.log(arraySwap(myArr));
 
 // 11d
 // for(let i = 0; i<=10; i+=2){
