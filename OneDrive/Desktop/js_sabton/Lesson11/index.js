@@ -1,14 +1,17 @@
 // 11a
-// const myArrays = [10,20,30];
+const myArrays = [10,20,30];
 // myArrays[myArrays.length-1] = 99;
 // console.log(myArrays);
 
 // 11b
 // function getLastValue(myArrays){
-//     for(let i = 0; i < myArrays.length; i++){
-//         return myArrays[myArrays.length-1];
-//     }
+//   return myArrays[myArrays.length - 1];
+//     // for(let i = 0; i < myArrays.length; i++){
+//     //     return myArrays[myArrays.length-1];
+//     // }
 // }
+
+// console.log(getLastValue(myArrays));
 
 // const myArrays = ['Kristian','Jade','Hazel'];
 // console.log(getLastValue(myArrays));
@@ -139,25 +142,25 @@
 // console.log(findSmallestAndLargest(myArrays));
 
 // 11n count words
-function countWords(arr) {
-  const wordCount = {};
+// function countWords(arr) {
+//   const wordCount = {};
 
-  for (let i = 0; i < arr.length; i++) {
-    const word = arr[i];
-    // if (wordCount[word]) {
-    //     wordCount[word]++;
-    // } else {
-    //     wordCount[word] = 1;
-    // }
-    console.log(wordCount[word]);
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     const word = arr[i];
+//     // if (wordCount[word]) {
+//     //     wordCount[word]++;
+//     // } else {
+//     //     wordCount[word] = 1;
+//     // }
+//     console.log(wordCount[word]);
+//   }
 
  
 
-  return wordCount;
-}
+//   return wordCount;
+// }
   
-let myStringArrays = ['apple','apple','apple','apple','apple'];
+// let myStringArrays = ['apple','apple','apple','apple','apple'];
 
-console.log(countWords(myStringArrays));
+// console.log(countWords(myStringArrays));
 
