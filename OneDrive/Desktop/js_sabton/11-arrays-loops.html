@@ -47,15 +47,26 @@
         //     console.log(myArrays[i] + ' Test');
         // }
 
+        // let myArrays = [1,1,3];
+
+        // let sum = 0;
+        
+        // for(let i = 0; i < myArrays.length; i++){
+        //     sum +=myArrays[i];
+        // }
+
+        // console.log(sum);
+
         let myArrays = [1,1,3];
 
-        let sum = 0;
-        
+        let numberDouble = [];
+
         for(let i = 0; i < myArrays.length; i++){
-            sum +=myArrays[i];
+            let double = myArrays[i] * 2;
+            numberDouble.push(double);
         }
 
-        console.log(sum);
+        console.log(numberDouble);
 
         // let newArray = myArrays.filter(value => value !== 4)
         // console.log(newArray);
