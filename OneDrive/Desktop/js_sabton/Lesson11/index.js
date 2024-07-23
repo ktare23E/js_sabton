@@ -1,5 +1,5 @@
 // 11a
-const myArrays = [10,20,30];
+// const myArrays = [10,20,30];
 // myArrays[myArrays.length-1] = 99;
 // console.log(myArrays);
 
@@ -19,21 +19,21 @@ const myArrays = [10,20,30];
 
 //11c
 
-function arraySwap(myArrays){
-    if(myArrays.length >= 2){
-        let temp = myArrays[0];
-        myArrays[0] = myArrays[myArrays.length-1];
-        myArrays[myArrays.length-1] = temp;
-        return myArrays;
-    }else{
-      return "You need an array with more than 2 length";
-    }
-}
+// function arraySwap(myArrays){
+//     if(myArrays.length >= 2){
+//         let temp = myArrays[0];
+//         myArrays[0] = myArrays[myArrays.length-1];
+//         myArrays[myArrays.length-1] = temp;
+//         return myArrays;
+//     }else{
+//       return "You need an array with more than 2 length";
+//     }
+// }
 
-let myArr = [1];
+// let myArr = [1];
 
 
-console.log(arraySwap(myArr));
+// console.log(arraySwap(myArr));
 
 // 11d
 // for(let i = 0; i<=10; i+=2){
@@ -69,7 +69,7 @@ console.log(arraySwap(myArr));
 //     return newArray;
 // }
 
-// let myArrays = [5,2,5];
+// let myArrays = [-1,0,2];
 
 // console.log(addOne(myArrays));
 
@@ -85,17 +85,31 @@ console.log(arraySwap(myArr));
 // console.log(addNum(myArrays,2));
 
 // 11j add 2 arrays
-// function addTwoArrays(array1,array2){
-//     const newArray = [];
-//     for(let i = 0; i < array1.length; i++){
-//         newArray.push(array1[i] + array2[i]);
-//     }
-//     return newArray;
-// }
+function addTwoArrays(array1,array2){
+    let newArray = [];
+    let maxNumber = Math.max(array1.length,array2.length);
 
-// let myArrays = [2,4,6];
-// let myArrays2 = [1,2,3];
-// console.log(addTwoArrays(myArrays,myArrays2));
+    if(array1.length === 0 || array2.length === 0 ){
+        return "cannot be empty array"; 
+    }else{
+        for(let i = 0; i < maxNumber; i++){
+          let value1 = array1[i] !== undefined ? array1[i] : 0;
+          let value2 = array2[i] !== undefined ? array2[i] : 0;
+          newArray.push(value1 + value2);
+        }
+
+        return newArray;
+    }
+
+    
+}
+
+let myArrays = [2,4,5];
+let myArrays2 = [1,2,2,5,10];
+console.log(addTwoArrays(myArrays,myArrays2));
+
+
+
 
 //11k return all the greater than 0 
 // function greaterThanZero(array){
