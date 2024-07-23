@@ -11,49 +11,52 @@
         <input class="to-do" type="text">
         <input type="date" class="date">
         <button class="submit">submit</button>
-
     </div>
     <div class="display"></div>
     <script>
         let display = document.querySelector('.display');
+        let todos = JSON.parse(localStorage.getItem('todo')) || [];
 
-        function displayData(todos){
-            
+        function displayData() {
             let output = '';
-
-            todos.forEach(value => {
-                output += `Todo: ${value.todo}, date: ${value.date} <br>`; 
-
-                // if(typeof value === 'object' && !Array.isArray(value)){
-                //     for(let i in value){
-                //     }
-                    
-                // }
+            todos.forEach((value) => {
+                output += `<p>Todo: ${value.todo}, date: ${value.date} <button class="delete" data-todo="${value.todo}">delete</button></p>`;
             });
             display.innerHTML = output;
-
+            deleteData(); // Reattach event listeners after updating the display
         }
 
-        let todos = JSON.parse(localStorage.getItem('todo')) || [];
-        displayData(todos);
+        function deleteData() {
+            let deleteButtons = document.querySelectorAll('.delete');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    let todo = button.getAttribute('data-todo');
+                    todos = todos.filter(value => value.todo !== todo);
 
-        document.querySelector('.submit').addEventListener('click',()=>{
+                    localStorage.setItem('todo', JSON.stringify(todos));
+                    displayData(); // Refresh the display
+                });
+            });
+        }
+
+        // Initial setup
+        displayData();
+
+        document.querySelector('.submit').addEventListener('click', () => {
             let todo = document.querySelector('.to-do').value;
             let date = document.querySelector('.date').value;
 
-            if(todo && date){
-                todos.push({todo,date});
-                localStorage.setItem('todo',JSON.stringify(todos));
-     
-                displayData(todos);
+            if (todo && date) {
+                todos.push({ todo, date });
+                localStorage.setItem('todo', JSON.stringify(todos));
+                displayData(); // Refresh the display and reattach event listeners
 
                 document.querySelector('.to-do').value = '';
                 document.querySelector('.date').value = '';
-            }else{
+            } else {
                 alert('Please fill the fields!');
             }
-
-        })
+        });
     </script>
 </body>
 </html>
