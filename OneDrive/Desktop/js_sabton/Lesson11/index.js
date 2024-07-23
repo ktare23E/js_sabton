@@ -84,46 +84,46 @@
 // let myArrays = [1,2,3];
 // console.log(addNum(myArrays,2));
 
-// 11j add 2 arrays
-function addTwoArrays(array1,array2){
-    let newArray = [];
-    let maxNumber = Math.max(array1.length,array2.length);
+// 11j add 2 arrays trapping an empty array and imbalance length
+// function addTwoArrays(array1,array2){
+//     let newArray = [];
+//     let maxNumber = Math.max(array1.length,array2.length);
 
-    if(array1.length === 0 || array2.length === 0 ){
-        return "cannot be empty array"; 
-    }else{
-        for(let i = 0; i < maxNumber; i++){
-          let value1 = array1[i] !== undefined ? array1[i] : 0;
-          let value2 = array2[i] !== undefined ? array2[i] : 0;
-          newArray.push(value1 + value2);
-        }
+//     if(array1.length === 0 || array2.length === 0 ){
+//         return "cannot be empty array"; 
+//     }else{
+//         for(let i = 0; i < maxNumber; i++){
+//           let value1 = array1[i] !== undefined ? array1[i] : 0;
+//           let value2 = array2[i] !== undefined ? array2[i] : 0;
+//           newArray.push(value1 + value2);
+//         }
 
-        return newArray;
-    }
+//         return newArray;
+//     }
 
     
-}
+// }
 
-let myArrays = [2,4,5];
-let myArrays2 = [1,2,2,5,10];
-console.log(addTwoArrays(myArrays,myArrays2));
+// let myArrays = [2,4,5];
+// let myArrays2 = [1,2,2,5,10];
+// console.log(addTwoArrays(myArrays,myArrays2));
 
 
 
 
 //11k return all the greater than 0 
-// function greaterThanZero(array){
-//     const newArray = [];
-//     for(let i = 0; i < array.length; i++){
-//         if(array[i] > 0){
-//             newArray.push(array[i]);
-//         }
-//     }
-//     return newArray.length;
-// }
+function positiveNumber(array){
+    let count =0;
+    for(let i = 0; i < array.length; i++){
+        if(array[i] > 0){
+            count++;
+        }
+    }
+    return count;
+}
 
-// let myArrays = [4,-2,2,17,-92,-27,11];
-// console.log(greaterThanZero(myArrays));
+let myArrays = [4,-2,2,17,-92,-27];
+console.log(positiveNumber(myArrays));
 
 // 11l and 11m
 // function findSmallestAndLargest(arr) {
