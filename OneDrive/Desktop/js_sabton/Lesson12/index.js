@@ -1,4 +1,4 @@
-// // 12a
+// 12a
 // const add = function(){
 //     console.log(2 +3);
 // }
@@ -6,7 +6,7 @@
 // add();
 // add();
 
-// // 12b
+// 12b
 // function runTwice(fun){
 //     fun();
 // }
@@ -27,7 +27,7 @@
 //     },1000);
 // });
 
-// //12e
+//12e
 // let addToCartButton = document.querySelector('.add-to-cart');
 // let display = '';
 // let cartId;
