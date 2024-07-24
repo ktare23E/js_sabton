@@ -1,16 +1,48 @@
 // 11o and 11p that has break then 11q
-function arraySearch(array,searchString){
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === searchString){
+// function arraySearch(array,searchString){
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === searchString){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// const myStringArrays = ['nice','hello','has','hazel'];
+// const searchString = 'wow';
+// console.log(arraySearch(myStringArrays,searchString));
+
+//11p
+// function arraySearch(array,searchString){
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === searchString){
+//             console.log(i);
+//             break;
+//         }
+//     }
+//     return -1;
+// }
+
+// const myStringArrays = ['nice','hello','has','hazel'];
+// const searchString = 'hello';
+// arraySearch(myStringArrays,searchString);
+
+
+// 11q
+
+function searchString(arr,str){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === str){
             return i;
         }
     }
     return -1;
 }
 
-const myStringArrays = ['nice','hello','has','hazel'];
-const searchString = 'wow';
-console.log(arraySearch(myStringArrays,searchString));
+let myArr = ["hello","world","test"];
+
+console.log(searchString(myArr,"test"));
+
 
 // 11r
 // function removeEgg(foods){
