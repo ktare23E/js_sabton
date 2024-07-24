@@ -103,28 +103,58 @@
 
 //11t
 
-function reverseRemoveEgg(foods){
-    let result = []; 
-    let count = 0;
+// function reverseRemoveEgg(foods){
+//     let result = []; 
+//     let count = 0;
 
-    for(let i = foods.length - 1; i >= 0 ; i--){
-        if(foods[i] === 'egg'){
-            if(count < 2){
-                count++;
-                continue;
-            }else{
-                result.push(foods[i]);
-            }
-        }else{
-            result.push(foods[i])
-        }
-    }
+//     for(let i = foods.length - 1; i >= 0 ; i--){
+//         if(foods[i] === 'egg'){
+//             if(count < 2){
+//                 count++;
+//                 continue;
+//             }else{
+//                 result.push(foods[i]);
+//             }
+//         }else{
+//             result.push(foods[i])
+//         }
+//     }
+    
 
-    return result.reverse();
-}
+//     return result.reverse();
+// }
 
-let foods = ['egg','ham','bacon','egg','hotdog','egg'];
-console.log(reverseRemoveEgg(foods));
+// let foods = ['egg','ham','bacon','egg','hotdog','egg'];
+// console.log(reverseRemoveEgg(foods));
+
+
+//11u
+
+// function reverseRemoveEgg(foods){
+//     let result = []; 
+//     let count = 0;
+
+//     for(let i = foods.length - 1; i >= 0 ; i--){
+//         if(foods[i] === 'egg'){
+//             if(count < 2){
+//                 count++;
+//                 continue;
+//             }else{
+//                 result.push(foods[i]);
+//             }
+//         }else{
+//             result.push(foods[i])
+//         }
+//     }
+    
+//     let copyResult = result.slice();
+
+//     return copyResult.reverse();
+// }
+
+// let foods = ['egg','ham','bacon','egg','hotdog','egg'];
+// console.log(reverseRemoveEgg(foods));
+// console.log(foods);
 
 
 // 11v
@@ -156,5 +186,6 @@ console.log(reverseRemoveEgg(foods));
 //     return result;
 // }
 
-// const myColors = ['red','blue','red','green','blue','blue','green','pink'];
+// const myColors = ['red','red','green',1];
+// console.log(myColors.includes(1));
 // console.log(noDuplicate(myColors));

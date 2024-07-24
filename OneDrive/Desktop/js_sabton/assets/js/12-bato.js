@@ -137,8 +137,8 @@
                 },1000);
                 autoPlay.innerHTML = 'Stop Play';
             }else{
-                isPlaying = false;
                 clearInterval(intervalId);
+                isPlaying = false;
                 autoPlay.innerHTML = 'Auto Play';
             }
         }

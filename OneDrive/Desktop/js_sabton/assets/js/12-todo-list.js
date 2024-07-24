@@ -8,6 +8,7 @@ const todoList = [
     dueDate: "2022-12-22",
   },
 ];
+
 let bodyElement = document.body;
 let addButton = document.querySelector('.add-todo-button');
 
