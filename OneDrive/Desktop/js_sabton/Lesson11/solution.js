@@ -30,18 +30,18 @@
 
 // 11q
 
-function searchString(arr,str){
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] === str){
-            return i;
-        }
-    }
-    return -1;
-}
+// function searchString(arr,str){
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] === str){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
 
-let myArr = ["hello","world","test"];
+// let myArr = ["hello","world","test"];
 
-console.log(searchString(myArr,"test"));
+// console.log(searchString(myArr,"test"));
 
 
 // 11r
@@ -77,7 +77,7 @@ console.log(searchString(myArr,"test"));
 //     return result;
 // }
 
-// const foods = ['egg','burger','ham','egg','bacon'];
+// const foods = ['egg','burger','egg','ham','egg','bacon','egg'];
 // console.log(updateRemoveEgg(foods));
 
 // 11t and 11u
@@ -99,6 +99,33 @@ console.log(searchString(myArr,"test"));
 // const foods = ['egg','burger','ham','egg','bacon','egg','egg','starbucks'];
 // const reserveOriginal = foods.slice();
 // console.log(reverseRemoveEgg(foods));
+
+
+//11t
+
+function reverseRemoveEgg(foods){
+    let result = []; 
+    let count = 0;
+
+    for(let i = foods.length - 1; i >= 0 ; i--){
+        if(foods[i] === 'egg'){
+            if(count < 2){
+                count++;
+                continue;
+            }else{
+                result.push(foods[i]);
+            }
+        }else{
+            result.push(foods[i])
+        }
+    }
+
+    return result.reverse();
+}
+
+let foods = ['egg','ham','bacon','egg','hotdog','egg'];
+console.log(reverseRemoveEgg(foods));
+
 
 // 11v
 // for(let i = 1; i <= 20; i++){
