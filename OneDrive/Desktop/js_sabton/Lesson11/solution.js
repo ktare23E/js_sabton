@@ -1,17 +1,16 @@
 // 11o and 11p that has break then 11q
-// function arraySearch(array,searchString){
-//     for(let i = 0; i < array.length; i++){
-//         if(array[i] === searchString){
-//             return i;
-//             break;
-//         }
-//     }
-//     return -1;
-// }
+function arraySearch(array,searchString){
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === searchString){
+            return i;
+        }
+    }
+    return -1;
+}
 
-// const myStringArrays = ['nice','hello','has','hazel'];
-// const searchString = 'none';
-// console.log(arraySearch(myStringArrays,searchString));
+const myStringArrays = ['nice','hello','has','hazel'];
+const searchString = 'wow';
+console.log(arraySearch(myStringArrays,searchString));
 
 // 11r
 // function removeEgg(foods){
@@ -87,16 +86,16 @@
 
 
 // 11w  
-function noDuplicate(array){
-    let result = [];
-    for(let i = 0; i < array.length; i++){
-        if(result.includes(array[i])){
-            continue;
-        }
-        result.push(array[i]);
-    }
-    return result;
-}
+// function noDuplicate(array){
+//     let result = [];
+//     for(let i = 0; i < array.length; i++){
+//         if(result.includes(array[i])){
+//             continue;
+//         }
+//         result.push(array[i]);
+//     }
+//     return result;
+// }
 
-const myColors = ['red','blue','red','green','blue','blue','green','pink'];
-console.log(noDuplicate(myColors));
+// const myColors = ['red','blue','red','green','blue','blue','green','pink'];
+// console.log(noDuplicate(myColors));
